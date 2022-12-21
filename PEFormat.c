@@ -36,7 +36,7 @@ int main(int argc, char **argv)
 		// Get the DOS Header Base
 		dosHeader = (PIMAGE_DOS_HEADER)lpBase; // 0x04000000 is default base address of the EXE file
 
-		// Get the Base of NT Header(PE Header) 	= dosHeader + RVA address of PE header
+		// Get the Base of NT Header(PE Header)
 		ntHeader = (PIMAGE_NT_HEADERS)((DWORD)(dosHeader) + (dosHeader->e_lfanew));
 		// Identify for valid PE file
 
